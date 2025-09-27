@@ -1,6 +1,6 @@
 {
   "build": {
-    "buildCommand": "npm ci --omit=dev --audit",
+    "buildCommand": "npm ci",
     "environment": {
       "NODE_ENV": "production"
     }
