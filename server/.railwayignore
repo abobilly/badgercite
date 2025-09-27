@@ -1,0 +1,6 @@
+# Ignore everything except server files
+/*
+!/server/
+!/server/**
+server/node_modules/
+server/logs/
