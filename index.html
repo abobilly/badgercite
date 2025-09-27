@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadgerCite – Citation Generator</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.25rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-row {
+            margin-top: 1rem;
+        }
+
+        #output {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BadgerCite Citation Generator</h1>
+        <p>Paste the text you want to cite below, enter your API key, and click <em>Generate Citations</em>.</p>
+        <label for="apiBase">API Base URL</label>
+        <input id="apiBase" type="text" placeholder="https://your-worker.example.workers.dev" autocomplete="off" />
+    <label for="citationsApi">Citations API URL</label>
+    <input id="citationsApi" type="text" value="/v1/citations" autocomplete="off" />
+        <label for="apiKey">API Key</label>
+        <input id="apiKey" type="text" placeholder="Enter your API key" autocomplete="off" />
+        <label for="inputText">Text Input</label>
+        <textarea id="inputText" placeholder="Paste your raw text here"></textarea>
+        <button id="submitBtn">Generate Citations</button>
+        <div class="btn-row">
+            <button id="callDummyBtn" type="button">Test Worker Dummy</button>
+            <button id="listTasksBtn" type="button">List Tasks</button>
+        </div>
+        <div id="output">Your formatted citations will appear here.</div>
+    </div>
+    <script>
+        (function () {
+            const submitBtn = document.getElementById('submitBtn');
+            const outputDiv = document.getElementById('output');
+            const getBase = () => {
+                const v = document.getElementById('apiBase').value.trim();
+                return v || '';
+            };
+            submitBtn.addEventListener('click', function () {
+                const apiKey = document.getElementById('apiKey').value.trim();
+                const text = document.getElementById('inputText').value.trim();
+                if (!text) {
+                    outputDiv.textContent = 'Please enter or paste some text to process.';
+                    return;
+                }
+                if (!apiKey) {
+                    outputDiv.textContent = 'Please enter your API key.';
+                    return;
+                }
+                outputDiv.textContent = 'Processing...';
+                // Citations API endpoint (configurable field above)
+                const citationsApiInput = document.getElementById('citationsApi');
+                let apiUrl = (citationsApiInput && citationsApiInput.value.trim()) || '/v1/citations';
+                const base = getBase();
+                if (apiUrl.startsWith('/') && base) {
+                    apiUrl = base.replace(/\/$/, '') + apiUrl;
+                }
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + apiKey
+                    },
+                    body: JSON.stringify({ text: text })
+                })
+                    .then(function (response) {
+                        if (!response.ok) {
+                            throw new Error('API returned status ' + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        // Assuming the API returns a JSON with a `formatted` property containing HTML.
+                        if (data && data.formatted) {
+                            outputDiv.innerHTML = data.formatted;
+                        } else {
+                            // Fallback: show raw JSON if `formatted` field is not present.
+                            outputDiv.textContent = JSON.stringify(data, null, 2);
+                        }
+                    })
+                    .catch(function (err) {
+                        outputDiv.textContent = 'Error: ' + err.message;
+                    });
+
+            });
+
+            document.getElementById('callDummyBtn').addEventListener('click', async function () {
+                const base = getBase();
+                if (!base) {
+                    outputDiv.textContent = 'Enter API Base URL, e.g., https://<your>.workers.dev';
+                    return;
+                }
+                outputDiv.textContent = 'Calling dummy endpoint...';
+                try {
+                    const res = await fetch(base.replace(/\/$/, '') + '/dummy/demo', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name: 'BadgerCite' })
+                    });
+                    const data = await res.json();
+                    outputDiv.textContent = JSON.stringify(data, null, 2);
+                } catch (e) {
+                    outputDiv.textContent = 'Error calling dummy: ' + (e && e.message ? e.message : e);
+                }
+            });
+
+            // streaming demo removed
+        })();
+    </script>
+</body>
+
+</html>

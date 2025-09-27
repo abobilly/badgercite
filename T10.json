@@ -1,0 +1,403 @@
+{
+  "table": "T10",
+  "version": "draft-2025-09-23",
+  "purpose": "Geographical terms abbreviations for case names and citations (Bluebook Table 10), with Texas Greenbook consistency where applicable.",
+  "phase": 2,
+  "schema_notes": [
+    "Use these mappings only in case names and other contexts where T10 applies; do not use for reporter/court abbreviations (see T6–T8).",
+    "Typography is handled at render-time; small caps/italics not typically applied to T10 tokens.",
+    "Where Bluebook does not abbreviate a term, abbr==term."
+  ],
+  "sections": {
+    "T10.1": {
+      "title": "United States",
+      "entries": [
+        {
+          "term": "United States",
+          "abbr": "U.S.",
+          "notes": "Use 'U.S.' when the nation is a party or in geographic references."
+        },
+        {
+          "term": "United States of America",
+          "abbr": "U.S.",
+          "notes": "Treat as United States."
+        }
+      ]
+    },
+    "T10.2": {
+      "title": "States, District of Columbia, and Territories",
+      "entries": [
+        {
+          "term": "Alabama",
+          "abbr": "Ala."
+        },
+        {
+          "term": "Alaska",
+          "abbr": "Alaska"
+        },
+        {
+          "term": "Arizona",
+          "abbr": "Ariz."
+        },
+        {
+          "term": "Arkansas",
+          "abbr": "Ark."
+        },
+        {
+          "term": "California",
+          "abbr": "Cal."
+        },
+        {
+          "term": "Colorado",
+          "abbr": "Colo."
+        },
+        {
+          "term": "Connecticut",
+          "abbr": "Conn."
+        },
+        {
+          "term": "Delaware",
+          "abbr": "Del."
+        },
+        {
+          "term": "District of Columbia",
+          "abbr": "D.C."
+        },
+        {
+          "term": "Florida",
+          "abbr": "Fla."
+        },
+        {
+          "term": "Georgia",
+          "abbr": "Ga."
+        },
+        {
+          "term": "Hawaii",
+          "abbr": "Haw."
+        },
+        {
+          "term": "Idaho",
+          "abbr": "Idaho"
+        },
+        {
+          "term": "Illinois",
+          "abbr": "Ill."
+        },
+        {
+          "term": "Indiana",
+          "abbr": "Ind."
+        },
+        {
+          "term": "Iowa",
+          "abbr": "Iowa"
+        },
+        {
+          "term": "Kansas",
+          "abbr": "Kan."
+        },
+        {
+          "term": "Kentucky",
+          "abbr": "Ky."
+        },
+        {
+          "term": "Louisiana",
+          "abbr": "La."
+        },
+        {
+          "term": "Maine",
+          "abbr": "Me."
+        },
+        {
+          "term": "Maryland",
+          "abbr": "Md."
+        },
+        {
+          "term": "Massachusetts",
+          "abbr": "Mass."
+        },
+        {
+          "term": "Michigan",
+          "abbr": "Mich."
+        },
+        {
+          "term": "Minnesota",
+          "abbr": "Minn."
+        },
+        {
+          "term": "Mississippi",
+          "abbr": "Miss."
+        },
+        {
+          "term": "Missouri",
+          "abbr": "Mo."
+        },
+        {
+          "term": "Montana",
+          "abbr": "Mont."
+        },
+        {
+          "term": "Nebraska",
+          "abbr": "Neb."
+        },
+        {
+          "term": "Nevada",
+          "abbr": "Nev."
+        },
+        {
+          "term": "New Hampshire",
+          "abbr": "N.H."
+        },
+        {
+          "term": "New Jersey",
+          "abbr": "N.J."
+        },
+        {
+          "term": "New Mexico",
+          "abbr": "N.M."
+        },
+        {
+          "term": "New York",
+          "abbr": "N.Y."
+        },
+        {
+          "term": "North Carolina",
+          "abbr": "N.C."
+        },
+        {
+          "term": "North Dakota",
+          "abbr": "N.D."
+        },
+        {
+          "term": "Ohio",
+          "abbr": "Ohio"
+        },
+        {
+          "term": "Oklahoma",
+          "abbr": "Okla."
+        },
+        {
+          "term": "Oregon",
+          "abbr": "Or."
+        },
+        {
+          "term": "Pennsylvania",
+          "abbr": "Pa."
+        },
+        {
+          "term": "Rhode Island",
+          "abbr": "R.I."
+        },
+        {
+          "term": "South Carolina",
+          "abbr": "S.C."
+        },
+        {
+          "term": "South Dakota",
+          "abbr": "S.D."
+        },
+        {
+          "term": "Tennessee",
+          "abbr": "Tenn."
+        },
+        {
+          "term": "Texas",
+          "abbr": "Tex."
+        },
+        {
+          "term": "Utah",
+          "abbr": "Utah"
+        },
+        {
+          "term": "Vermont",
+          "abbr": "Vt."
+        },
+        {
+          "term": "Virginia",
+          "abbr": "Va."
+        },
+        {
+          "term": "Washington",
+          "abbr": "Wash."
+        },
+        {
+          "term": "West Virginia",
+          "abbr": "W. Va."
+        },
+        {
+          "term": "Wisconsin",
+          "abbr": "Wis."
+        },
+        {
+          "term": "Wyoming",
+          "abbr": "Wyo."
+        },
+        {
+          "term": "Puerto Rico",
+          "abbr": "P.R."
+        },
+        {
+          "term": "Guam",
+          "abbr": "Guam"
+        },
+        {
+          "term": "American Samoa",
+          "abbr": "Am. Samoa"
+        },
+        {
+          "term": "Commonwealth of the Northern Mariana Islands",
+          "abbr": "N. Mar. I."
+        },
+        {
+          "term": "United States Virgin Islands",
+          "abbr": "V.I."
+        }
+      ]
+    },
+    "T10.3": {
+      "title": "Words in Place Names",
+      "notes": [
+        "Apply to geographic terms within party/case names (e.g., 'City of', 'County of').",
+        "Compass directions abbreviate when they precede other words (e.g., 'N. Las Vegas'); retain when integral (e.g., 'West Virginia' uses 'W. Va.')."
+      ],
+      "entries": [
+        {
+          "term": "County",
+          "abbr": "Cnty."
+        },
+        {
+          "term": "Parish",
+          "abbr": "Par."
+        },
+        {
+          "term": "Borough",
+          "abbr": "Boro."
+        },
+        {
+          "term": "Township",
+          "abbr": "Twp."
+        },
+        {
+          "term": "Village",
+          "abbr": "Vill."
+        },
+        {
+          "term": "Heights",
+          "abbr": "Hts."
+        },
+        {
+          "term": "Junction",
+          "abbr": "Jct."
+        },
+        {
+          "term": "Mount",
+          "abbr": "Mt."
+        },
+        {
+          "term": "Mountain",
+          "abbr": "Mtn."
+        },
+        {
+          "term": "Mountains",
+          "abbr": "Mtns."
+        },
+        {
+          "term": "Fort",
+          "abbr": "Ft."
+        },
+        {
+          "term": "Saint",
+          "abbr": "St."
+        },
+        {
+          "term": "Sainte",
+          "abbr": "Ste."
+        },
+        {
+          "term": "North",
+          "abbr": "N."
+        },
+        {
+          "term": "South",
+          "abbr": "S."
+        },
+        {
+          "term": "East",
+          "abbr": "E."
+        },
+        {
+          "term": "West",
+          "abbr": "W."
+        },
+        {
+          "term": "Northeast",
+          "abbr": "N.E."
+        },
+        {
+          "term": "Northwest",
+          "abbr": "N.W."
+        },
+        {
+          "term": "Southeast",
+          "abbr": "S.E."
+        },
+        {
+          "term": "Southwest",
+          "abbr": "S.W."
+        },
+        {
+          "term": "River",
+          "abbr": "R."
+        },
+        {
+          "term": "Lake",
+          "abbr": "L."
+        },
+        {
+          "term": "Harbor",
+          "abbr": "Harb."
+        },
+        {
+          "term": "Point",
+          "abbr": "Pt."
+        },
+        {
+          "term": "Port",
+          "abbr": "Port."
+        },
+        {
+          "term": "Springs",
+          "abbr": "Spr."
+        },
+        {
+          "term": "Falls",
+          "abbr": "Falls"
+        },
+        {
+          "term": "Islands",
+          "abbr": "Is."
+        },
+        {
+          "term": "Island",
+          "abbr": "I."
+        },
+        {
+          "term": "Cape",
+          "abbr": "Cape"
+        }
+      ]
+    }
+  },
+  "greenbook_overrides": {
+    "Texas": {
+      "notes": [
+        "Keep 'Tex.' for the state; do not use postal 'TX'.",
+        "When 'County' appears in Texas party names, abbreviate to 'Cnty.' per T10.3."
+      ]
+    }
+  },
+  "uncertainties": [
+    "T10.3 list is representative; Bluebook may include additional place-name words (e.g., 'Beach', 'Cliffs', 'Canyon'); verify before treating as exhaustive.",
+    "Territorial abbreviations for Northern Mariana Islands sometimes appear as 'N. Mar. I.'; confirm preferred form in current edition.",
+    "Whether 'Port' is abbreviated in T10.3 varies by source; check specific Bluebook entry."
+  ]
+}

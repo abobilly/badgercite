@@ -1,0 +1,3 @@
+# Root-level requirements for AutoAI workspace
+# Includes Python dependencies for the autonomous system
+-r autonomous-system/requirements.txt

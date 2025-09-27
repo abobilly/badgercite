@@ -15,7 +15,7 @@ BadgerCite is a sophisticated, paste-in tool that transforms raw legal text into
 - **Professional Typography** - HTML output with proper italics, small caps, underlining
 
 ### 🧠 **Advanced Features**
-- **Zero External Dependencies** - Fully self-contained citation engine
+
 - **Explicit Uncertainty Handling** - Never guesses; marks unknowns clearly
 - **Shortcite Management** - Automatic short-form generation and tracking
 - **Context-Aware Formatting** - Bluepages vs. Whitepages modes

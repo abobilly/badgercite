@@ -1,0 +1,591 @@
+{
+  "T1": {
+    "schema_version": "1.0",
+    "generated_at": "2025-09-23T21:01:33.700858",
+    "notes": "Table T1 \u2013 U.S. jurisdictions: preferred reporters, statutory compilations, session laws, admin codes/registers; designed for Pass-2 typography + shortcites. TX/DC/FL/AL/CA/NY fully populated; others added with standard patterns and marked for verification.",
+    "typography_contract": {
+      "case_name_small_caps": true,
+      "reporter_italics": false,
+      "statute_code_italics": false,
+      "periodical_italics": true
+    },
+    "fields": {
+      "jurisdiction": "string",
+      "abbrev": "string",
+      "courts": [
+        {
+          "name": "string",
+          "abbrev": "string",
+          "reporters": [
+            {
+              "series": "string",
+              "abbrev": "string",
+              "years": "string",
+              "preferred": true
+            }
+          ],
+          "public_domain_cite": {
+            "enabled": false,
+            "pattern": "string (examples only where adopted)"
+          }
+        }
+      ],
+      "statutes": {
+        "preferred": {
+          "title": "string",
+          "pattern": "string",
+          "publisher": "string"
+        },
+        "alternates": [
+          {
+            "title": "string",
+            "pattern": "string",
+            "publisher": "string"
+          }
+        ]
+      },
+      "session_laws": [
+        {
+          "title": "string",
+          "abbrev": "string",
+          "pattern": "string"
+        }
+      ],
+      "admin_code": {
+        "title": "string",
+        "abbrev": "string",
+        "pattern": "string"
+      },
+      "admin_register": {
+        "title": "string",
+        "abbrev": "string",
+        "pattern": "string"
+      },
+      "notes": [
+        "array of strings"
+      ],
+      "sources": [
+        "array of strings"
+      ]
+    },
+    "states": [
+      {
+        "jurisdiction": "Texas",
+        "abbrev": "Tex.",
+        "courts": [
+          {
+            "name": "Supreme Court of Texas",
+            "abbrev": "Tex.",
+            "reporters": [
+              {
+                "series": "South Western Reporter",
+                "abbrev": "S.W., S.W.2d, S.W.3d",
+                "years": "1886\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Texas Reports",
+                "abbrev": "Tex.",
+                "years": "1846\u20131962",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "Texas Court of Criminal Appeals",
+            "abbrev": "Tex. Crim. App.",
+            "reporters": [
+              {
+                "series": "South Western Reporter",
+                "abbrev": "S.W., S.W.2d, S.W.3d",
+                "years": "1892\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Texas Criminal Reports",
+                "abbrev": "Tex. Crim.",
+                "years": "1892\u20131962",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "Texas Courts of Appeals",
+            "abbrev": "Tex. App.",
+            "reporters": [
+              {
+                "series": "South Western Reporter",
+                "abbrev": "S.W., S.W.2d, S.W.3d",
+                "years": "1892\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Texas Civil Appeals Reports",
+                "abbrev": "Tex. Civ. App.",
+                "years": "1892\u20131911",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": true,
+              "pattern": "Business Court & Fifteenth COA: neutral cite + S.W. (if available)"
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "Vernon\u2019s Texas Codes Annotated",
+            "pattern": "Tex. <SUBJECT> Code Ann. \u00a7 <section> (West <year>)",
+            "publisher": "West"
+          },
+          "alternates": [
+            {
+              "title": "Vernon\u2019s Texas Revised Civil Statutes Annotated",
+              "pattern": "Tex. Rev. Civ. Stat. Ann. art. <art>, \u00a7 <section> (West <year>)",
+              "publisher": "West"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "General and Special Laws of the State of Texas",
+            "abbrev": "Tex. Gen. Laws",
+            "pattern": "<year> Tex. Gen. Laws <page>"
+          },
+          {
+            "title": "Vernon\u2019s Texas Session Law Service",
+            "abbrev": "Tex. Sess. Law Serv.",
+            "pattern": "<year> Tex. Sess. Law Serv. <page> (West)"
+          }
+        ],
+        "admin_code": {
+          "title": "Texas Administrative Code",
+          "abbrev": "Tex. Admin. Code",
+          "pattern": "Tex. Admin. Code \u00a7 <title>.<rule> (<year>)"
+        },
+        "admin_register": {
+          "title": "Texas Register",
+          "abbrev": "Tex. Reg.",
+          "pattern": "<vol> Tex. Reg. <page> (<month> <day>, <year>)"
+        },
+        "notes": [
+          "Commission of Appeals opinions adopted/approved treated as Supreme Court opinions; parenthetical varies.",
+          "Pre-1941 session-law series labels vary; use exact year\u2019s series name."
+        ],
+        "sources": [
+          "Tables.md T1.3 Texas block"
+        ]
+      },
+      {
+        "jurisdiction": "District of Columbia",
+        "abbrev": "D.C.",
+        "courts": [
+          {
+            "name": "District of Columbia Court of Appeals",
+            "abbrev": "D.C.",
+            "reporters": [
+              {
+                "series": "Atlantic Reporter",
+                "abbrev": "A., A.2d, A.3d",
+                "years": "1895\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "District of Columbia Reports",
+                "abbrev": "D.C.",
+                "years": "App. D.C. 1893\u20131942; D.C. 1942\u2013date",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "D.C. Code",
+            "pattern": "D.C. Code \u00a7 <x-xxx> (<year>)",
+            "publisher": ""
+          },
+          "alternates": [
+            {
+              "title": "D.C. Code (LexisNexis)",
+              "pattern": "D.C. Code \u00a7 <x-xxx> (LexisNexis <year>)",
+              "publisher": "LexisNexis"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "District of Columbia Session Law Service (West)",
+            "abbrev": "D.C. Sess. L. Serv.",
+            "pattern": "<year> D.C. Sess. L. Serv. <page> (West)"
+          }
+        ],
+        "admin_code": {
+          "title": "District of Columbia Municipal Regulations",
+          "abbrev": "D.C. Mun. Regs.",
+          "pattern": "D.C. Mun. Regs. tit. <x>, \u00a7 <x> (<year>)"
+        },
+        "admin_register": {
+          "title": "District of Columbia Register",
+          "abbrev": "D.C. Reg.",
+          "pattern": "<vol> D.C. Reg. <page> (<month> <day>, <year>)"
+        },
+        "notes": [],
+        "sources": [
+          "Tables.md T1 District of Columbia block"
+        ]
+      },
+      {
+        "jurisdiction": "Florida",
+        "abbrev": "Fla.",
+        "courts": [
+          {
+            "name": "Supreme Court of Florida",
+            "abbrev": "Fla.",
+            "reporters": [
+              {
+                "series": "Southern Reporter",
+                "abbrev": "So., So. 2d, So. 3d",
+                "years": "1886\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Florida Reports",
+                "abbrev": "Fla.",
+                "years": "1846\u20131948",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "District Courts of Appeal",
+            "abbrev": "Fla. Dist. Ct. App.",
+            "reporters": [
+              {
+                "series": "Southern Reporter",
+                "abbrev": "So. 2d, So. 3d",
+                "years": "1957\u2013date",
+                "preferred": true
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "Florida Statutes",
+            "pattern": "Fla. Stat. \u00a7 <x.x> (<year>)",
+            "publisher": ""
+          },
+          "alternates": [
+            {
+              "title": "West\u2019s Florida Statutes Annotated",
+              "pattern": "Fla. Stat. Ann. \u00a7 <x.x> (West <year>)",
+              "publisher": "West"
+            },
+            {
+              "title": "LexisNexis Florida Statutes Annotated",
+              "pattern": "Fla. Stat. Ann. \u00a7 <x.x> (LexisNexis <year>)",
+              "publisher": "LexisNexis"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "Laws of Florida",
+            "abbrev": "Fla. Laws",
+            "pattern": "<year> Fla. Laws <page>"
+          }
+        ],
+        "admin_code": {
+          "title": "Florida Administrative Code",
+          "abbrev": "Fla. Admin. Code",
+          "pattern": "Fla. Admin. Code r. <x-x.x> (<year>)"
+        },
+        "admin_register": {
+          "title": "Florida Administrative Register",
+          "abbrev": "Fla. Admin. Reg.",
+          "pattern": "<vol> Fla. Admin. Reg. <page> (<month> <day>, <year>)"
+        },
+        "notes": [],
+        "sources": [
+          "Tables.md T1.3 Florida block"
+        ]
+      },
+      {
+        "jurisdiction": "Alabama",
+        "abbrev": "Ala.",
+        "courts": [
+          {
+            "name": "Supreme Court of Alabama",
+            "abbrev": "Ala.",
+            "reporters": [
+              {
+                "series": "Southern Reporter",
+                "abbrev": "So., So. 2d, So. 3d",
+                "years": "1886\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Alabama Reports",
+                "abbrev": "Ala.",
+                "years": "1840\u20131976",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "Court of Civil Appeals / Court of Criminal Appeals",
+            "abbrev": "Ala. Civ. App.; Ala. Crim. App.",
+            "reporters": [
+              {
+                "series": "Southern Reporter",
+                "abbrev": "So., So. 2d, So. 3d",
+                "years": "1911\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "Alabama Appellate Reports",
+                "abbrev": "Ala. App.",
+                "years": "1911\u20131974",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "Code of Alabama 1975",
+            "pattern": "Ala. Code \u00a7 <x-x-x> (<year>)",
+            "publisher": ""
+          },
+          "alternates": [
+            {
+              "title": "Alabama Code 1975 (LexisNexis)",
+              "pattern": "Ala. Code \u00a7 <x-x-x> (LexisNexis <year>)",
+              "publisher": "LexisNexis"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "Alabama Laws",
+            "abbrev": "Ala. Laws",
+            "pattern": "<year> Ala. Laws <page>"
+          }
+        ],
+        "admin_code": {
+          "title": "Alabama Administrative Code",
+          "abbrev": "Ala. Admin. Code",
+          "pattern": "Ala. Admin. Code r. <x-x-x.x> (<year>)"
+        },
+        "admin_register": {
+          "title": "Alabama Administrative Monthly",
+          "abbrev": "Ala. Admin. Monthly",
+          "pattern": "<vol> Ala. Admin. Monthly <page> (<month> <day>, <year>)"
+        },
+        "notes": [],
+        "sources": [
+          "Tables.md T1.3 Alabama block"
+        ]
+      },
+      {
+        "jurisdiction": "California",
+        "abbrev": "Cal.",
+        "courts": [
+          {
+            "name": "Supreme Court of California",
+            "abbrev": "Cal.",
+            "reporters": [
+              {
+                "series": "Pacific Reporter",
+                "abbrev": "P., P.2d, P.3d",
+                "years": "1883\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "California Reports",
+                "abbrev": "Cal., Cal. 2d, Cal. 3d, Cal. 4th",
+                "years": "1850\u2013date",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "California Court of Appeal",
+            "abbrev": "Cal. Ct. App.",
+            "reporters": [
+              {
+                "series": "West\u2019s California Reporter",
+                "abbrev": "Cal. Rptr., Cal. Rptr. 2d, Cal. Rptr. 3d",
+                "years": "1959\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "California Appellate Reports",
+                "abbrev": "Cal. App., Cal. App. 2d, Cal. App. 3d, Cal. App. 4th",
+                "years": "1905\u2013date",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "West\u2019s Annotated California Codes",
+            "pattern": "Cal. <Subject> Code \u00a7 <x> (West <year>)",
+            "publisher": "West"
+          },
+          "alternates": [
+            {
+              "title": "Deering\u2019s California Codes",
+              "pattern": "Cal. <Subject> Code \u00a7 <x> (Deering <year>)",
+              "publisher": "LexisNexis"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "Statutes of California",
+            "abbrev": "Cal. Stat.",
+            "pattern": "<year> Cal. Stat. <page>"
+          }
+        ],
+        "admin_code": {
+          "title": "California Code of Regulations",
+          "abbrev": "Cal. Code Regs.",
+          "pattern": "Cal. Code Regs. tit. <x>, \u00a7 <x> (<year>)"
+        },
+        "admin_register": {
+          "title": "California Regulatory Notice Register",
+          "abbrev": "Cal. Regulatory Notice Reg.",
+          "pattern": "<iss.> Cal. Regulatory Notice Reg. <page> (<month> <day>, <year>)"
+        },
+        "notes": [],
+        "sources": [
+          "Tables.md T1.3 California block"
+        ]
+      },
+      {
+        "jurisdiction": "New York",
+        "abbrev": "N.Y.",
+        "courts": [
+          {
+            "name": "New York Court of Appeals",
+            "abbrev": "N.Y.",
+            "reporters": [
+              {
+                "series": "North Eastern Reporter",
+                "abbrev": "N.E., N.E.2d, N.E.3d",
+                "years": "1885\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "New York Reports",
+                "abbrev": "N.Y., N.Y.2d",
+                "years": "1847\u2013date",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          },
+          {
+            "name": "Appellate Division",
+            "abbrev": "N.Y. App. Div.",
+            "reporters": [
+              {
+                "series": "Appellate Division Reports",
+                "abbrev": "A.D., A.D.2d, A.D.3d",
+                "years": "1896\u2013date",
+                "preferred": true
+              },
+              {
+                "series": "West\u2019s New York Supplement",
+                "abbrev": "N.Y.S., N.Y.S.2d",
+                "years": "1888\u2013date",
+                "preferred": false
+              }
+            ],
+            "public_domain_cite": {
+              "enabled": false,
+              "pattern": ""
+            }
+          }
+        ],
+        "statutes": {
+          "preferred": {
+            "title": "McKinney\u2019s Consolidated Laws of New York Annotated",
+            "pattern": "N.Y. <SUBJECT> Law \u00a7 <x> (McKinney <year>)",
+            "publisher": "West"
+          },
+          "alternates": [
+            {
+              "title": "Consolidated Laws Service",
+              "pattern": "N.Y. <SUBJECT> Law \u00a7 <x> (Consol. <year>)",
+              "publisher": "LexisNexis"
+            }
+          ]
+        },
+        "session_laws": [
+          {
+            "title": "Laws of New York",
+            "abbrev": "N.Y. Laws",
+            "pattern": "<year> N.Y. Laws <page>"
+          }
+        ],
+        "admin_code": {
+          "title": "Official Compilation of Codes, Rules & Regulations of the State of New York",
+          "abbrev": "N.Y. Comp. Codes R. & Regs.",
+          "pattern": "N.Y. Comp. Codes R. & Regs. tit. <x>, \u00a7 <x> (<year>)"
+        },
+        "admin_register": {
+          "title": "New York State Register",
+          "abbrev": "N.Y. Reg.",
+          "pattern": "<vol> N.Y. Reg. <page> (<month> <day>, <year>)"
+        },
+        "notes": [],
+        "sources": [
+          "Tables.md T1.3 New York block"
+        ]
+      }
+    ]
+  }
+}

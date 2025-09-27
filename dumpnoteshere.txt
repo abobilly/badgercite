@@ -1,0 +1,42 @@
+Here’s my quick take:
+
+Overall approach
+
+* Yes to a vector store: load your Bluebook/Greenbook excerpts + your rules JSON + your test sets. Use it for style/rule grounding, not for primary law. Pair it with live web search for authority lookup/confirmation.
+* Pipeline: (1) clean & segment raw paste (dedupe whitespace, fix OCR artifacts), (2) detect task (case vs. statute vs. memo), (3) NER/resolve candidates (party names, reporters, code titles), (4) verify via web, (5) format per Bluepages + Greenbook, (6) emit HTML with typographic tags and shortcites logic.
+* Output: HTML for the site with `<i>` (italics), `<u>` (underline—use sparingly), and small caps via CSS (`<span class="sc">` + `.sc{font-variant:small-caps;}`).
+
+Functionality to build in
+
+* Case resolver: fuzzy match on party names + reporter/year hints; confirm with docket/court when available; fill unknowns as “(unknown)” rather than guessing.
+* Statute fetcher: exact-match section detection; if text is short, Hash-Indentation exact text; if long, return cite + “link to official/current text” placeholder string (you can swap in a URL on the frontend if you want).
+* Shortcite manager: one shortcite per authority per response; for paragraphs, emit trailing “shortcites” block in cited order.
+* Texas overrides: S.W./S.W\.2d/S.W\.3d reporters; correct parentheticals (Tex.; Tex. Crim. App.; Tex. App.—City \[Dist.] Year); petition/writ history; Houston districts; Business Court/Fifteenth COA neutral cite if present.
+* Confidence & diagnostics: include a lightweight confidence note and list of “authorities\_considered” so you can spot weak matches.
+
+Typography notes
+
+* Bluepages practitioner style is mostly roman; italicize case names and certain procedural phrases. Small caps for court abbreviations works well in HTML via CSS; avoid relying on font-specific small-caps.
+* Underline is rarely needed on the web—allow it, but reserve for user-specified emphasis or house style.
+
+Limitations / risks
+
+* Raw OCR noise: garbage punctuation and broken party names will tank resolver accuracy; add a pre-pass normalizer (e.g., join hyphen-broken words, strip zero-width chars).
+* Ambiguity: “Smith v. Jones” collisions—must return multiple candidates or mark “Authority unspecified (multiple matches possible).”
+* Web reliance: site rate limits, paywalls, and stale pages; you’ll need caching and backoffs. Also beware unofficial aggregators with incorrect metadata.
+* Vector store drift: your Bluebook OCR is not authoritative; store it, but don’t let it override verified formats—treat as secondary style guidance.
+* Regression coverage: your current test sets are template-y; add edge cases (mem. op., per curiam, subsequent history, en banc, unpublished, session-law enactments, old reporters).
+
+Data you already have (how I’d use it)
+
+* 50\_state\_citation\_rules\_v1\_7.json: rules scaffold; extend with explicit Greenbook fields (petition history, Houston districts, Business Court neutral cites). Add typography hints (italics/small caps/underline flags).
+* citation\_tests\_v2\_0.json: wire into CI as format guards (regex), but supplement with semantic checks (court-year consistency, reporter-court compatibility).
+* citation\_regression\_set\_v1\_9\_all.jsonl: keep as smoke tests; expand Texas-heavy cases and statutes, especially Penal Code § 42.07/Title 7 speech cases, Health & Safety nuisances, etc.
+
+Implementation tips
+
+* Do a two-pass generation: pass 1 (identify/verify authorities), pass 2 (render with typography + shortcites). Keeps style separate from retrieval.
+* Emit a structured JSON alongside HTML (authorities array with fields: type, full\_cite, shortcite, court, year, reporter, status, confidence). Frontend displays HTML; backend stores JSON for analytics.
+* Add a strict “no-fabrication” guardrail: if any field is uncertain, leave blank or “(unknown)”—don’t guess pincites or petition histories.
+
+Net: your plan is sound. Use vectors for style/rules, the web for authority truth, and keep rendering deterministic with a small formatter that enforces Bluepages + Greenbook + your shortcite rules.

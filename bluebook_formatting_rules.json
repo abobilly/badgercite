@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "description": "This file compiles detailed formatting rules from the 22nd edition of the Bluebook (Bluepages for practitioners) and supplements them with Texas Greenbook overrides.  It is designed for the second pass of a citation-generation system: after authorities have been identified and verified, this file provides the typography and citation structure needed to render full and short-form citations correctly, including small‑cap formatting, italics, and roman text.  The rules draw from publicly available Bluebook summaries and the University of Texas Tarlton Law Library guides, which reflect the current edition’s guidance as of August 2025.  Where the Greenbook conflicts with the Bluebook for Texas authorities, the override rules below control.",
+    "edition": "22nd",
+    "compiled_date": "2025-09-23",
+    "jurisdiction": "United States (general) with Texas Greenbook modifications",
+    "sources": [
+      "Tarlton Law Library Bluebook guides (typeface conventions, cases, statutes, signals, pages & pincites, order of authorities, short‑form rules, books & periodicals)",
+      "Tarlton Law Library Greenbook overview",
+      "Mitchell Hamline School of Law Bluebook citation handout",
+      "Cornell LII Basic Legal Citation (underlining & italics rules)"
+    ]
+  },
+
+  "typography": {
+    "notes": "The Bluepages permit underlining to substitute for italics in court documents, but because this file is intended for digital rendering we default to italics.  Large and small capitals are optional under the Bluepages; this file specifies when they may be used to emulate printed style.",
+    "case_names": {
+      "full_citation": {
+        "type": "roman",
+        "procedural_phrases": "italic"
+      },
+      "textual_sentence": {
+        "type": "italic"  
+      },
+      "footnote_citation": {
+        "type": "roman",
+        "procedural_phrases": "italic"
+      }
+    },
+    "book_titles": {
+      "author": "small_caps",
+      "title": "small_caps",
+      "editor_translator_parenthetical": "roman"
+    },
+    "periodical_titles": {
+      "article_title": "italic",
+      "journal_name": "small_caps",
+      "author": "roman"
+    },
+    "signals": {
+      "introductory_signals": "italic",
+      "hereinafter_designations": "match_source",
+      "supra_infra": "italic",
+      "id": "italic"  
+    },
+    "punctuation": {
+      "default": "roman",
+      "within_italic": "italic"
+    },
+    "other": {
+      "ordinary_text": "roman",
+      "emphasis": "italic",
+      "small_caps_permitted": true,
+      "underline_allowed": true
+    }
+  },
+
+  "general_rules": {
+    "order_of_authorities": {
+      "rule": "Authorities within a citation clause should be ordered in a logical manner rather than following a rigid hierarchy.  When multiple authorities are cited under the same signal, list the most pertinent authority first.  In deciding order, consider (1) type of authority, (2) jurisdiction, and (3) hierarchy or chronology.  Separate authorities with semicolons.",
+      "source_note": "Bluebook rule 1.4 no longer mandates the exhaustive ordering of prior editions; instead it directs logical ordering based on type, jurisdiction and hierarchy【601574444003771†L120-L139】."
+    },
+    "citation_sentences_and_clauses": {
+      "rule": "Bluepages rule B1.1 distinguishes citation sentences from citation clauses.  A citation sentence begins with a capital letter and ends with a period; multiple authorities separated by semicolons may appear in a citation sentence, and it cites sources that support the entire preceding sentence【831167760327209†L103-L118】.  Citation clauses, by contrast, are set off by commas and follow the proposition to which they relate; they begin with a lowercase letter unless the cited source would otherwise be capitalized and do not end with a period unless they are the final clause of a sentence【831167760327209†L119-L134】.  Citation clauses cite authorities that support only part of a sentence.",
+      "source_note": "Derived from Bluepages B1.1 in the Mitchell Hamline Bluebook citation handout【831167760327209†L103-L134】."
+    },
+    "pages_and_pincites": {
+      "volumes": "Cite numbered volumes in Arabic numerals even when the original uses Roman numerals【683672225375428†L124-L140】.",
+      "multi_volume_works": "When the same author wrote all volumes of a treatise, place the volume number before the author’s name; otherwise, place it before the title【683672225375428†L124-L136】.",
+      "page_citations": "Page numbers follow the work’s title and precede the date parenthetical.  For consecutively paginated sources, include the page on which the authority begins【683672225375428†L164-L173】.  When citing a specific page, separate the pincite from the first page with a comma【683672225375428†L177-L183】.  Use ‘at’ before a pincite only when necessary to avoid confusion【683672225375428†L185-L188】.",
+      "page_ranges": "Use an en dash or hyphen to indicate an inclusive page range (e.g., 442–45).  Retain all digits of the final page but drop repetitious digits when obvious【683672225375428†L189-L195】.  Separate multiple non‑consecutive pages with commas【683672225375428†L202-L205】.",
+      "star_pagination": "Retain stars when citing unpaginated slip opinions and star‑paginated databases【683672225375428†L206-L213】.",
+      "footnotes": "For footnotes, after the page number, add ‘n.’ and the footnote number.  For multiple footnotes, use ‘nn.’ and the range【683672225375428†L215-L225】.",
+      "sections_paragraphs": "When a source is organized by section or paragraph, use the section (§) or paragraph (¶) symbol followed by the number【683672225375428†L243-L254】.  Do not use ‘at’ before these symbols【683672225375428†L255-L256】.",
+      "graphical_materials": "Cite tables, charts and other graphical materials by page number and designation; separate multiple graphical materials with commas and ampersands【683672225375428†L227-L235】."
+    },
+    "short_form_general": {
+      "conditions": "Use a short‑form citation only if the authority has been cited in full in the same footnote or in one of the preceding five footnotes【773292110577606†L340-L355】.",
+      "signals": {
+        "id": {
+          "rule": "‘Id.’ refers to the immediately preceding authority and is italicized (including the period)【49462006433443†L150-L161】.  It may be used when the immediately preceding footnote cites only one authority and no intervening authority appears.  Any change in pincites must follow ‘Id.’ (e.g., Id. at 45)【49462006433443†L171-L174】.",
+          "style": { "text": "italic" }
+        },
+        "supra": {
+          "rule": "Supra may be used to refer back to previously cited secondary sources (books, periodicals and some legislative materials) but should not be used for cases or statutes【49462006433443†L176-L190】.  A supra citation generally consists of the author’s last name (or institutional author), the italicized word ‘supra’, the footnote number preceded by ‘note’, and an optional pincite introduced by ‘at’【49462006433443†L192-L207】.",
+          "style": { "text": "italic", "author": "match_original" }
+        },
+        "hereinafter": {
+          "rule": "Use ‘hereinafter’ when a work’s title or author is long or when multiple authorities cited in the same footnote could cause confusion【49462006433443†L217-L238】.  In the initial full citation, insert a bracketed hereinafter designation before any explanatory parenthetical.  Subsequent citations use this short form with ‘supra’ rules.",
+          "style": { "text": "match_original" }
+        },
+        "infra": {
+          "rule": "‘Infra’ directs the reader to material appearing later in the same work.  It is used in conjunction with ‘See’ and is italicized【49462006433443†L243-L261】.",
+          "style": { "text": "italic" }
+        }
+      }
+    }
+  },
+
+  "signals": {
+    "supporting": {
+      "typeface": "italic",
+      "signals": ["[no signal]", "E.g.", "Accord", "See", "See also", "Cf."],
+      "rules": {
+        "no_signal": "Use no signal when the cited authority directly states the proposition, identifies a quotation’s source, or identifies a source referred to in the text【147932337234742†L148-L154】.",
+        "e.g.": "Use ‘E.g.’ to indicate that the cited authority is an example among others; it may be combined with other signals (e.g., ‘See, e.g.,’) with an italicized comma after the signal combination【147932337234742†L156-L166】.",
+        "see": "Use ‘See’ when the authority clearly supports the proposition but an inferential step is required【147932337234742†L171-L174】.",
+        "see_also": "Use ‘See also’ for additional authorities that provide support but require an explanatory parenthetical stating their relevance【147932337234742†L176-L180】.",
+        "cf": "Use ‘Cf.’ (confer) to signal comparison; it is technically classified as a supporting signal but is often used for analogy【147932337234742†L190-L211】.  Include an explanatory parenthetical.",
+        "accord": "Use ‘Accord’ when two authorities state the same proposition but only one is quoted or paraphrased in the text."
+      }
+    },
+    "comparison": {
+      "typeface": "italic",
+      "signals": ["Compare"],
+      "rules": {
+        "compare": "Use ‘Compare’ to juxtapose two or more authorities; follow with ‘with’ and connect each authority with commas.  Both ‘compare’ and ‘with’ should be italicized【147932337234742†L213-L217】.  Provide an explanatory parenthetical explaining the relevance of the comparison."
+      }
+    },
+    "contradictory": {
+      "typeface": "italic",
+      "signals": ["Contra", "But see", "But cf."],
+      "rules": {
+        "contra": "Use ‘Contra’ when the cited authority directly contradicts the proposition【147932337234742†L228-L236】.",
+        "but_see": "Use ‘But see’ when the cited authority clearly supports a proposition contradictory to the text【147932337234742†L234-L239】.",
+        "but_cf": "Use ‘But cf.’ when the cited authority analogously contradicts the text【147932337234742†L234-L239】.  Drop the word ‘But’ if another contradictory signal has already been used【147932337234742†L241-L243】."
+      }
+    },
+    "order_of_signals": ["supporting", "comparison", "contradictory", "general_background"],
+    "capitalization": {
+      "rule": "Signals are capitalized when they begin a citation sentence but are lower case when they begin a citation clause【831167760327209†L136-L139】.",
+      "source_note": "Bluepages B1.2 emphasises capitalisation differences for introductory signals【831167760327209†L136-L139】."
+    },
+    "general_background": {
+      "typeface": "italic",
+      "signals": ["See generally", "Cf. e.g.,"],
+      "rules": {
+        "see_generally": "Use ‘See generally’ to cite background material; an explanatory parenthetical is required.【147932337234742†L183-L187】."
+      }
+    }
+  },
+
+  "cases": {
+    "pattern": "{case_name}, {volume} {reporter} {page}{, pincite}{ (court)} {year}{, parenthetical(s)}",
+    "typeface": {
+      "case_name": "roman",
+      "procedural_phrase": "italic",
+      "volume": "roman",
+      "reporter": "roman",
+      "page": "roman",
+      "pincite": "roman",
+      "court": "roman",
+      "year": "roman",
+      "parenthetical": "roman"
+    },
+    "case_name_rules": {
+      "omit_other_parties": "Omit all parties or actions other than the first listed【773292110577606†L146-L147】.",
+      "omit_et_al": "Omit words indicating multiple parties such as ‘et al.’【773292110577606†L149-L150】.",
+      "omit_given_names": "Omit given names and use only surnames【773292110577606†L151-L153】.",
+      "omit_geographic_terms": "Omit generic geographic designations like ‘State of’ or ‘City of’; use ‘State’ only when citing decisions from within that state【773292110577606†L155-L159】.",
+      "abbreviate_common_words": "Abbreviate common words and geographic terms using Bluebook tables T6 and T10【773292110577606†L141-L162】.",
+      "omit_business_terms": "Omit redundant designations of a business entity (Inc., Co., Ltd.) unless they differ between parties【773292110577606†L165-L166】.",
+      "do_not_abbreviate_united_states": "Never abbreviate ‘United States’ when it is a party name【773292110577606†L168-L170】."
+    },
+    "reporter_rules": {
+      "components": "The reporter portion consists of the volume number, an abbreviation of the reporter, and the first page of the case【773292110577606†L176-L189】.",
+      "parallel_citations": "Bluebook generally does not require parallel citations; Table T1 lists preferred reporters【773292110577606†L190-L199】.",
+      "volume_format": "Volume numbers must be given in Arabic numerals even if the original source uses Roman numerals【773292110577606†L200-L203】.",
+      "pinpoint_citations": "Insert a comma followed by the specific page being cited after the first page.  Use an en dash for a range of pages【773292110577606†L208-L211】."
+    },
+    "court_and_year": {
+      "supreme_court": "For U.S. Supreme Court decisions, include only the year in parentheses【773292110577606†L238-L241】.",
+      "federal_courts": "For federal courts of appeals or district courts, include the court abbreviation and the year【773292110577606†L243-L248】.",
+      "state_highest_court": "For highest courts of a state, include the state name and year; if the reporter identifies the state unambiguously, the state may be omitted【773292110577606†L260-L279】.",
+      "ordinals": "Ordinals ending in ‘2nd’ or ‘3rd’ are written as ‘2d’ or ‘3d’ in court abbreviations【773292110577606†L255-L258】."
+    },
+    "parentheticals": {
+      "order": ["weight_of_authority", "quoting_or_citing", "explanatory"],
+      "weight_of_authority": "Indicates the weight of the decision or the portion cited (e.g., per curiam, en banc)【773292110577606†L291-L303】.",
+      "quoting_or_citing": "Used when the cited case is quoting or citing another authority; after noting this, provide the full citation for the quoted/cited case【773292110577606†L304-L309】.",
+      "explanatory": "Provides additional explanatory information connecting the case to the proposition, beginning with a present participle (holding, stating, noting)【773292110577606†L311-L323】."
+    },
+    "case_history": {
+      "rule": "Include prior and subsequent history when relevant.  Use explanatory phrases such as rev'd, aff'd, vacated, overruled, abrogated, etc., per Bluebook table T8【773292110577606†L330-L338】."
+    },
+    "short_form": {
+      "conditions": "A short‑form citation to a case may be used when the case has been cited in full in the same footnote or in one of the preceding five footnotes【773292110577606†L340-L355】.",
+      "forms": {
+        "id": "Refer to the immediately preceding case【49462006433443†L150-L161】.",
+        "supra": "Only used for secondary sources; not for cases【49462006433443†L176-L194】.",
+        "short_case_name": "After a full citation, subsequent references to the same case may be shortened to the case name alone or with a pincite (e.g., Roe, 410 U.S. at 113).  Use ‘v.’ for subsequent references; omit any procedural phrase."
+      }
+    }
+  },
+
+  "statutes": {
+    "pattern": "{statute_name?} {title} {code_abbreviation} {section_symbol}{section_number}{ (year? or publisher_year)}",
+    "typeface": {
+      "statute_name": "roman",
+      "title_number": "roman",
+      "code_abbreviation": "roman",
+      "section_symbol": "roman",
+      "section_number": "roman",
+      "year": "roman",
+      "publisher": "roman"
+    },
+    "general_rules": {
+      "primary_source": "Cite the current official code when available.  If a current official code does not exist, cite a current unofficial code【915828295309535†L154-L158】.",
+      "unofficial_codes": "Unofficial codes are often more current; Table T1 lists preferred publications【915828295309535†L159-L167】.",
+      "statute_name": "Include the statute’s name only if it is widely used or helpful to identify the statute; do not include an initial ‘The’【915828295309535†L170-L176】.  It is permissible to include both the official and popular names, with the popular name in parentheses【915828295309535†L174-L182】.",
+      "title_code_section": "Statutes are cited by numeric title, an abbreviation of the code, and the section symbol followed by the section number【915828295309535†L184-L197】.",
+      "federal_statutes_no_year": "For U.S. federal code sections, do not include a date; the Bluebook no longer requires a year for federal statutes【915828295309535†L213-L220】.",
+      "digital_sources": "When citing electronic databases, include the name of the database and the currency of the database in a parenthetical【915828295309535†L226-L230】.  When a state publishes its statutes exclusively online, cite the online source directly【915828295309535†L232-L233】.",
+      "superseded_statutes": "If a statute has been repealed or superseded, cite the current code if the statute still appears; otherwise cite the last code edition where it appeared【915828295309535†L140-L144】."
+    },
+    "short_form": {
+      "conditions": "For statutes, a short form may consist of the title or popular name followed by a section or reference (e.g., § 107) without repeating the entire code citation.  Use ‘id.’ or ‘supra’ where appropriate according to general short‑form rules for secondary materials.",
+      "style": { "text": "roman" }
+    }
+  },
+
+  "session_laws": {
+    "pattern": "{act_name}, {legislature_and_session}, ch. {chapter}, § {section}, {year} {publication} {page_range}{ (to be codified at {future_code_location})}",
+    "typeface": {
+      "act_name": "roman",
+      "legislature_and_session": "roman",
+      "chapter": "roman",
+      "section": "roman",
+      "publication": "roman",
+      "page_range": "roman",
+      "future_code_location": "roman"
+    },
+    "general_rules": {
+      "components": "Cite session laws by naming the act, the legislature and session, the chapter and section(s), the year and publication (e.g., Stat., Gen. Laws, Sess. Law Serv.), and the page.  If the provision will be codified in a code, indicate the future code location in parenthesis.",
+      "texas_overrides": "For Texas session laws, include the statute name, legislature and session, chapter and section numbers, the publication (Tex. Gen. Laws or Tex. Sess. Law Serv.), and where the statute will be codified【983945322321840†L150-L156】.  The Greenbook requires inclusion of these elements.",
+      "style": "Use roman type for all elements; italicize signals if used."
+    }
+  },
+
+  "legislative_materials": {
+    "bills": {
+      "pattern": "{bill_number}, {legislature} {session} {year}",
+      "rules": "Cite unenacted bills by bill number, legislature, session (R.S. for regular session, C.S. for called session), and year【983945322321840†L165-L167】.",
+      "style": { "text": "roman" }
+    },
+    "house_senate_journals": {
+      "pattern": "{chamber} {legislature} {number} {session}, {page}, {year}",
+      "rules": "House and Senate Journal citations should include the chamber (House or Senate), legislature number, session, page, and year【983945322321840†L165-L169】.",
+      "style": { "text": "roman" }
+    },
+    "hearings_reports": {
+      "rules": "Legislative hearings may be cited using ‘supra’ and ‘hereinafter’; other legislative materials should generally not use supra.  Provide details per Bluebook rules for hearings, reports, and committee prints.",
+      "style": { "text": "roman" }
+    }
+  },
+
+  "books_and_treatises": {
+    "pattern": "{volume?} {author}, {title} {page?} ({edition?} {publisher?} {year})",
+    "typeface": {
+      "author": "small_caps",
+      "title": "small_caps",
+      "volume": "roman",
+      "page": "roman",
+      "parenthetical": "roman"
+    },
+    "author_rules": {
+      "personal_authors": "Include authors’ names in full as they appear in the source, including suffixes like Jr. or III, but omit titles such as ‘Dr.’.  Offset suffixes with a comma only if that is how they appear in the source【134677557311534†L132-L137】.",
+      "two_authors": "If a work has two authors, list them in the same order as in the source, separated by an ampersand【134677557311534†L142-L146】.",
+      "more_than_three": "If there are more than three authors, give the first author’s name followed by ‘et al.’【134677557311534†L148-L152】.  If listing all authors is relevant, list them all in order, separating the final two authors with an ampersand without a comma【134677557311534†L154-L156】.",
+      "institutional_authors": "Provide the full institutional name.  When a particular individual is given authorial credit within an institution, list the individual followed by the institution【134677557311534†L158-L167】.  Use ‘U.S.’ as an abbreviation when ‘United States’ is part of an institutional name【134677557311534†L172-L174】."
+    },
+    "title_rules": {
+      "capitalization": "Provide the title exactly as it appears on the title page but capitalize words per Bluebook rule 8: capitalize all words except articles, conjunctions, and prepositions of four or fewer letters; always capitalize the first word and the first word after a colon【134677557311534†L187-L199】.",
+      "no_abbreviations": "Do not abbreviate words in the title【134677557311534†L196-L198】.  Case names in titles should appear in ordinary roman type【334083265031071†L174-L175】."
+    },
+    "publisher_edition_year_rules": {
+      "single_edition": "If the work has only one edition, include only the year of publication in parentheses【134677557311534†L210-L214】.",
+      "multiple_editions_same_publisher": "If a work has multiple editions from the same publisher, indicate the edition number and year in parentheses (e.g., 2d ed. 2006)【134677557311534†L215-L223】.",
+      "different_publisher": "If the edition is from a different publisher, include the publisher and year of the edition followed by the year of original publication【134677557311534†L224-L227】."
+    },
+    "short_form": {
+      "id": "Use ‘Id.’ to refer to the immediately preceding book citation when appropriate【134677557311534†L229-L244】.",
+      "supra": "Use ‘supra’ to refer to previously cited works; include the author’s last name and footnote number【134677557311534†L229-L269】.",
+      "hereinafter": "When the author’s name or title is long or when multiple sources might be confused, establish a short form using ‘hereinafter’ in brackets in the first citation【49462006433443†L217-L238】."
+    }
+  },
+
+  "periodicals": {
+    "pattern": "{author}, {title}, {volume} {journal_abbreviation} {first_page}{, pincite} ({year})",
+    "typeface": {
+      "author": "roman",
+      "title": "italic",
+      "journal_abbreviation": "small_caps",
+      "volume": "roman",
+      "first_page": "roman",
+      "pincite": "roman",
+      "year": "roman"
+    },
+    "author_rules": {
+      "single_author": "List the author’s full name as it appears in the source【334083265031071†L133-L141】.",
+      "two_authors": "Use an ampersand between two authors’ names【334083265031071†L142-L146】.",
+      "multiple_authors": "For three or more authors, either list the first followed by ‘et al.’ or list all authors separated by commas, with the final two separated by an ampersand【334083265031071†L148-L158】."
+    },
+    "title_rules": {
+      "style": "Italicize the article title【334083265031071†L166-L175】.  Words italicized in the original title (e.g., case names) should appear in roman type【334083265031071†L174-L175】.  Capitalize words per Bluebook rule 8.",
+      "small_words": "Articles, conjunctions and short prepositions should not be capitalized【334083265031071†L170-L175】."
+    },
+    "consecutively_paginated_journals": {
+      "rule": "For journals with continuous pagination across issues, cite the volume number, journal abbreviation (small caps), first page and year; do not include the issue number【334083265031071†L189-L211】.  Use Arabic numerals for volumes even if the original uses Roman numerals【334083265031071†L199-L204】.  Abbreviate journal names according to tables T6, T10 and T13【334083265031071†L216-L227】.",
+      "pincites": "Provide a pincite after the first page separated by a comma【334083265031071†L230-L234】."
+    },
+    "nonconsecutively_paginated_periodicals": {
+      "rule": "For non‑consecutively paginated periodicals (e.g., newspapers, magazines), cite the author, article title (italic), periodical name (small caps), the full date of issue as it appears on the source, the word ‘at’, and the page【334083265031071†L236-L245】.",
+      "no_author": "If there is no author, begin the citation with the article title【334083265031071†L248-L249】."
+    },
+    "short_form": {
+      "id": "Use ‘Id.’ when the periodical has been cited in the immediately preceding citation【334083265031071†L254-L258】.",
+      "supra": "Use ‘supra’ with the author’s last name or title and footnote number when appropriate【334083265031071†L259-L261】."
+    }
+  },
+
+  "digital_materials": {
+    "rule": "Citations should prefer traditional printed sources when available, but digital sources may be used when the official publication is only online or when it provides additional information.  When citing to an electronic database, include the provider and the currency date【915828295309535†L226-L230】.  When a jurisdiction only publishes statutes online, cite the online source directly【915828295309535†L232-L233】.",
+    "style": { "text": "roman", "database_name": "roman", "currency_date": "roman" }
+  },
+
+  "greenbook_overrides": {
+    "cases": {
+      "court_of_appeals": {
+        "pattern": "{case_name}, {volume} {reporter} {page} ({court\u00a0\u2014\u00a0district} {year}, {history}{, subsequent_history?}{, interlocutory_orders?})",
+        "rules": "For Texas intermediate courts of appeals, include the South Western Reporter citation, a parenthetical with the court and district separated by an em dash (e.g., Tex. App.—Houston [14th Dist.]), the year, and any writ or petition history, subsequent history and interlocutory orders【983945322321840†L124-L133】.",
+        "mandamus_and_original_proceedings": "Cite mandamus cases and other original proceedings as Texas Supreme Court cases but add a parenthetical ‘orig. proceeding’ after the date【983945322321840†L133-L137】.",
+        "trial_court": "For trial court decisions, include the case name, cause number, and a parenthetical naming the court, county, and full date【983945322321840†L138-L141】."
+      },
+      "history_abbreviations": "Use history and subsequent history abbreviations consistent with Table T8 but include petition or writ history (e.g., pet. denied, pet. ref’d).  When citing to the Texas Business Court or Fifteenth Court of Appeals, include the neutral citation if available, followed by the South Western Reporter.",
+      "style": { "reporter": "roman", "court": "roman", "history": "roman" }
+    },
+    "statutes": {
+      "publisher": "The Greenbook requires citing the Texas code to ‘West’ rather than ‘Vernon’s’; include ‘West’ in the parenthetical before the year【983945322321840†L142-L147】.",
+      "unsuperseded_codes": "The Texas Code of Criminal Procedure and the Texas Probate Code remain independent and should be cited accordingly【983945322321840†L147-L149】.",
+      "session_laws": "Texas session law citations should include the statute name, legislature and session, chapter and section, publication (Tex. Gen. Laws or Tex. Sess. Law Serv.), and the future code location【983945322321840†L150-L156】.",
+      "electronic_sources": "Citation to electronic databases is permitted when print is unavailable or when a parallel citation aids the reader.  Include the provider and currency.  Do not cite the Texas Legislative Council’s online database【983945322321840†L156-L163】."
+    },
+    "legislative_history": {
+      "bills": "Unenacted bills: cite the bill number, legislature number, session (R.S. for regular session, C.S. for called session), and year【983945322321840†L165-L167】.",
+      "house_senate_journals": "Cite the chamber, legislature, number, session, page, and year for House and Senate Journal references【983945322321840†L165-L169】."
+    },
+    "books": {
+      "frequently_cited_treatises": "When citing a practice guide or treatise frequently used in Texas, include the volume (if more than one), author, title, page or section number, edition (if more than one), and date of publication【983945322321840†L170-L179】."
+    }
+  },
+
+  "uncertainties": [
+    "The Bluebook tables T6, T10 and T13 provide exhaustive lists of abbreviations for words, geographic terms, and journals; these tables are proprietary and thus not reproduced here.  Users must rely on the official Bluebook or another licensed source for specific abbreviations.",
+    "Neutral citation formats for the Texas Business Court and Fifteenth Court of Appeals are emerging; guidelines for when to provide public‑domain citations alongside South Western Reporter citations may evolve.",
+    "The Bluebook’s treatment of electronic sources changes with each edition, and rules regarding database currency and provider names may not be exhaustive here.",
+    "This compilation draws on secondary sources summarizing the Bluebook; some nuances of rules 14 (administrative materials), 18 (digital materials), and 19 (services) are not fully captured.",
+    "There may be additional Texas‑specific idiosyncrasies not covered by public sources (e.g., particular county or court abbreviations, unique statutory revisions)."
+  ]
+}
