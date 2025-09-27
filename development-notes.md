@@ -4,6 +4,11 @@
 
 ---
 
+// In server/railway.json, remove these lines:
+"healthcheckPath": "/health",
+"healthcheckTimeout": 300,
+
+
 ## 🤖 AI Assistant Conversation - September 27, 2025
 
 ### User Question: "if i didnt focus on citation format guidelines, and instead focused on the code, what would i do?"
