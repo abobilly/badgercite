@@ -6,7 +6,7 @@
  */
 
 const express = require('express');
-const Joi = require('joi');
+// const Joi = require('joi'); // Temporarily disabled for Railway deployment
 const CitationEngine = require('../services/CitationEngine');
 const AuthorityResolver = require('../services/AuthorityResolver');
 const TypographyRenderer = require('../services/TypographyRenderer');
@@ -17,27 +17,27 @@ const citationEngine = new CitationEngine();
 const authorityResolver = new AuthorityResolver();
 const typographyRenderer = new TypographyRenderer();
 
-// Input validation schema
-const formatSchema = Joi.object({
-  text: Joi.string().required().max(50000),
-  jurisdiction: Joi.string().default('federal').valid(
-    'federal', 'alabama', 'alaska', 'arizona', 'arkansas', 'california',
-    'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii',
-    'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky',
-    'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan',
-    'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska',
-    'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york',
-    'north-carolina', 'north-dakota', 'ohio', 'oklahoma', 'oregon',
-    'pennsylvania', 'rhode-island', 'south-carolina', 'south-dakota',
-    'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington',
-    'west-virginia', 'wisconsin', 'wyoming', 'dc'
-  ),
-  style: Joi.string().default('bluepages').valid('bluepages', 'whitepages'),
-  includeShortcites: Joi.boolean().default(true),
-  outputFormat: Joi.string().default('html').valid('html', 'text', 'json'),
-  verifyAuthorities: Joi.boolean().default(true),
-  confidenceThreshold: Joi.number().min(0).max(1).default(0.7)
-});
+// Input validation schema - temporarily disabled for Railway deployment
+// const formatSchema = Joi.object({
+//   text: Joi.string().required().max(50000),
+//   jurisdiction: Joi.string().default('federal').valid(
+//     'federal', 'alabama', 'alaska', 'arizona', 'arkansas', 'california',
+//     'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii',
+//     'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky',
+//     'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan',
+//     'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska',
+//     'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york',
+//     'north-carolina', 'north-dakota', 'ohio', 'oklahoma', 'oregon',
+//     'pennsylvania', 'rhode-island', 'south-carolina', 'south-dakota',
+//     'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington',
+//     'west-virginia', 'wisconsin', 'wyoming', 'dc'
+//   ),
+//   style: Joi.string().default('bluepages').valid('bluepages', 'whitepages'),
+//   includeShortcites: Joi.boolean().default(true),
+//   outputFormat: Joi.string().default('html').valid('html', 'text', 'json'),
+//   verifyAuthorities: Joi.boolean().default(true),
+//   confidenceThreshold: Joi.number().min(0).max(1).default(0.7)
+// });
 
 /**
  * POST /api/citation/format
@@ -46,18 +46,28 @@ const formatSchema = Joi.object({
  */
 router.post('/format', async (req, res) => {
   try {
-    // Validate input
-    const { error, value } = formatSchema.validate(req.body);
-    if (error) {
+    // Validate input - temporarily disabled for Railway deployment
+    // const { error, value } = formatSchema.validate(req.body);
+    // if (error) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     error: 'Validation Error',
+    //     details: error.details.map(d => d.message),
+    //     timestamp: new Date().toISOString()
+    //   });
+    // }
+
+    // Basic validation without joi
+    const { text, jurisdiction = 'federal', style = 'bluepages', includeShortcites = true, outputFormat = 'html', verifyAuthorities = true, confidenceThreshold = 0.7 } = req.body;
+    
+    if (!text) {
       return res.status(400).json({
         success: false,
         error: 'Validation Error',
-        details: error.details.map(d => d.message),
+        details: ['Text is required'],
         timestamp: new Date().toISOString()
       });
     }
-
-    const { text, jurisdiction, style, includeShortcites, outputFormat, verifyAuthorities, confidenceThreshold } = value;
     
     logger.info(`Citation request: ${text.length} chars, jurisdiction: ${jurisdiction}, style: ${style}`);
 
@@ -200,16 +210,20 @@ router.get('/jurisdictions', (req, res) => {
  */
 router.post('/validate', async (req, res) => {
   try {
-    const { error, value } = Joi.object({
-      citation: Joi.string().required().max(1000),
-      jurisdiction: Joi.string().default('federal')
-    }).validate(req.body);
+    // Temporarily disabled joi validation for Railway deployment
+    // const { error, value } = Joi.object({
+    //   citation: Joi.string().required().max(1000),
+    //   jurisdiction: Joi.string().default('federal')
+    // }).validate(req.body);
     
-    if (error) {
+    // Basic validation without joi
+    const { citation, jurisdiction = 'federal' } = req.body;
+    
+    if (!citation) {
       return res.status(400).json({
         success: false,
         error: 'Validation Error',
-        details: error.details.map(d => d.message)
+        details: ['Citation is required']
       });
     }
     

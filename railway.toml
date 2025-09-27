@@ -3,6 +3,7 @@
   builder = "RAILPACK"
 
 [deploy]
+  runtime = "V1"
   startCommand = "node server/index.js"
   healthcheckPath = "/health"
   healthcheckTimeout = 300

@@ -23,8 +23,7 @@
     "morgan": "^1.10.1",
     "winston": "^3.17.0",
     "rate-limiter-flexible": "^8.0.1",
-    "dotenv": "^17.2.2",
-    "joi": "^18.0.1"
+    "dotenv": "^17.2.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
