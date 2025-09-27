@@ -1,11 +1,8 @@
 # Railway deployment configuration
 [build]
-  buildCommand = "npm install"
+  buildCommand = "npm ci --production"
 
 [deploy]
-  startCommand = "npm start"
+  startCommand = "node index.js"
   healthcheckPath = "/health"
   healthcheckTimeout = 300
-
-[build.environment]
-  NODE_ENV = "production"
