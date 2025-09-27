@@ -3,7 +3,7 @@ main = "client/build"
 compatibility_date = "2025-09-26"
 
 [build]
-command = "cd client && npm ci --omit=dev && npm run build"
+command = "cd client && npm install --omit=dev && npm run build"
 cwd = "/"
 
 [build.environment_variables]

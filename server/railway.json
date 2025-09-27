@@ -1,6 +1,6 @@
 {
   "build": {
-    "buildCommand": "npm ci",
+    "buildCommand": "npm install --omit=dev",
     "environment": {
       "NODE_ENV": "production"
     }

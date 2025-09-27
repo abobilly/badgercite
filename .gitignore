@@ -95,5 +95,7 @@ build/
 out/
 
 # Package manager lock files (optional - some prefer to keep these)
-# package-lock.json
+package-lock.json
+client/package-lock.json
+server/package-lock.json
 # yarn.lock
