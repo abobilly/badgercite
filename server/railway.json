@@ -1,0 +1,13 @@
+{
+  "build": {
+    "buildCommand": "npm ci --omit=dev",
+    "environment": {
+      "NODE_ENV": "production"
+    }
+  },
+  "deploy": {
+    "startCommand": "node index.js",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 300
+  }
+}
