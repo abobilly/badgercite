@@ -48,17 +48,22 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key']
 }));
 
+// Direct health endpoint for Railway (before middleware)
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'healthy', 
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    service: 'badgercite-server'
+  });
+});
+
 // Body parsing
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Rate limiting
 app.use(rateLimiter);
-
-// Direct health endpoint for Railway
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
-});
 
 // API routes
 app.use('/api/health', healthRouter);
