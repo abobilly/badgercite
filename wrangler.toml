@@ -10,5 +10,4 @@ cwd = "/"
 NODE_ENV = "production"
 REACT_APP_API_URL = "https://api.badgercite.com"
 
-[[pages_build_output_dir]]
-value = "client/build"
+pages_build_output_dir = "client/build"
