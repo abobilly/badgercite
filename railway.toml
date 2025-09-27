@@ -1,0 +1,12 @@
+# Railway configuration for BadgerCite server deployment
+[build]
+  builder = "RAILPACK"
+  buildCommand = "cd server && npm ci --omit=dev"
+
+[deploy]
+  startCommand = "cd server && node index.js"
+  healthcheckPath = "/health"
+  healthcheckTimeout = 300
+
+[build.environment]
+  NODE_ENV = "production"
