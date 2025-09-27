@@ -1,0 +1,14 @@
+name = "badgercite"
+main = "client/build"
+compatibility_date = "2025-09-26"
+
+[build]
+command = "cd client && npm ci && npm run build"
+cwd = "/"
+
+[build.environment_variables]
+NODE_ENV = "production"
+REACT_APP_API_URL = "https://api.badgercite.com"
+
+[[pages_build_output_dir]]
+value = "client/build"
