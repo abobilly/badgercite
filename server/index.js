@@ -55,6 +55,11 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Rate limiting
 app.use(rateLimiter);
 
+// Direct health endpoint for Railway
+app.get('/health', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
+});
+
 // API routes
 app.use('/api/health', healthRouter);
 app.use('/api/citation', citationRouter);
