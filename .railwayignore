@@ -1,0 +1,10 @@
+# Railway should only deploy the server directory
+# Ignore everything except server/
+/*
+!/server/
+!/server/**
+
+# But ignore these within server/
+server/node_modules/
+server/logs/
+server/.railwayignore

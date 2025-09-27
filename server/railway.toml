@@ -1,8 +1,11 @@
-# Railway deployment configuration
+# Railway deployment configuration for server only
 [build]
-  buildCommand = "npm ci --production"
-
+  buildCommand = "npm ci --omit=dev"
+  
 [deploy]
   startCommand = "node index.js"
   healthcheckPath = "/health"
   healthcheckTimeout = 300
+
+[build.environment]
+  NODE_ENV = "production"
